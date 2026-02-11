@@ -40,12 +40,25 @@
 //     },3000);
 // }, 2200);
 
-let ulTeam = ["Virat", "Rohit", "Dhoni", "Jadeja", "Bumrah"];;
-let flutterTeam = ["Kartik", "Amit", "Satyarth", "Shivam", "Satyam"];
+// let ulTeam = ["Virat", "Rohit", "Dhoni", "Jadeja", "Bumrah"];;
+// let flutterTeam = ["Kartik", "Amit", "Satyarth", "Shivam", "Satyam"];
 
-function showMenu(ulTeam, flutterTeam){
-    console.log(add(ulTeam, flutterTeam));
-}
-function showMenu(ulTeam, flutterTeam){
-    console.log(add(...ulTeam, ...flutterTeam));
-}
+// function showMenu(ulTeam, flutterTeam){
+//     console.log(add(ulTeam, flutterTeam));
+// }
+// function showMenu(ulTeam, flutterTeam){
+//     console.log(add(...ulTeam, ...flutterTeam));
+// }
+
+const p = new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+        resolve("Promise resolved");
+        reject("Promise rejected");
+    }, 2000 );
+});
+
+p.then((message)=>{
+    console.log(message);
+}).catch((error)=>{
+    console.log(error);
+})
